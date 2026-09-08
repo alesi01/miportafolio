@@ -2,12 +2,7 @@
 
 <h3 align="center">Full Stack Developer (Stack MERN) & Analista de Datos</h3>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Stack-MERN-38bdf8?style=for-the-badge&logo=react&logoColor=white" alt="MERN" />
-  <img src="https://img.shields.io/badge/Data-Python%20%7C%20PowerBI-f2c811?style=for-the-badge&logo=python&logoColor=white" alt="Data Analytics" />
-  <img src="https://img.shields.io/badge/Status-100%25%20Operational-30d158?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/Aesthetics-Apple%20Pro-2997ff?style=for-the-badge" alt="Design" />
-</p>
+
 
 ---
 
