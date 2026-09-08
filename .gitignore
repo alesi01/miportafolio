@@ -49,6 +49,8 @@ personal-photos/
 *dni*
 *id-card*
 *passport*
+*.pdf
+*.png
 
 # ===================================================================
 # DEPENDENCIES & PACKAGES
