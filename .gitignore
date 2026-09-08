@@ -1,0 +1,107 @@
+# ===================================================================
+# SENSITIVE DATA, SECRETS, CREDENTIALS & API KEYS
+# ===================================================================
+# Environment variables and secrets
+.env
+.env.*
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# API keys, tokens, credentials & private configs
+secrets/
+secrets.*
+credentials/
+credentials.*
+config.local.json
+config.secret.json
+auth.json
+token.json
+*.key
+*.pem
+*.cert
+*.crt
+*.pfx
+*.p12
+id_rsa*
+
+# Database & local data dumps
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# Personal / private files and backups
+*.bak
+*.backup
+*.old
+personal/
+private/
+photos/
+personal-photos/
+*.private.*
+*profile-original*
+*foto-personal*
+*foto_personal*
+*dni*
+*id-card*
+*passport*
+
+# ===================================================================
+# DEPENDENCIES & PACKAGES
+# ===================================================================
+node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+
+# ===================================================================
+# LOGS & DIAGNOSTICS
+# ===================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===================================================================
+# RUNTIME, CACHE & TEMPORARY FILES
+# ===================================================================
+.cache/
+.parcel-cache/
+tmp/
+temp/
+.temp/
+*.tmp
+pid
+*.pid
+*.seed
+
+# ===================================================================
+# OPERATING SYSTEM & EDITOR METADATA
+# ===================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# IDE / Editor directories
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
