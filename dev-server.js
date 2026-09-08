@@ -29,7 +29,7 @@ const server = http.createServer((req, res) => {
 
   // Block access to hidden files (.env, .git, etc.)
   const filename = path.basename(safePath);
-  if (filename.startsWith('.') || filename.includes('server.js')) {
+  if (filename.startsWith('.') || filename.includes('server.js') || filename.includes('dev-server.js')) {
     res.writeHead(403, { 'Content-Type': 'text/plain' });
     res.end('403 Forbidden');
     return;

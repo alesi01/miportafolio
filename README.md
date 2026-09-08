@@ -86,7 +86,7 @@ Emulador de terminal interactiva con historial mediante flechas de navegación (
 
 2. **Iniciar el servidor local:**
    ```bash
-   node server.js
+   node dev-server.js
    ```
 
 3. **Abrir en el navegador:**
