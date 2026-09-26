@@ -51,6 +51,8 @@ personal-photos/
 *passport*
 *.pdf
 *.png
+!assets/*.pdf
+!assets/*.png
 
 # ===================================================================
 # DEPENDENCIES & PACKAGES
