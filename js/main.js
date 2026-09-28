@@ -295,14 +295,14 @@ const projectsData = [
     category: 'mern',
     categoryLabel: 'Stack MERN',
     title: 'Plataforma E-Commerce MERN',
-    shortDesc: 'Comercio electrónico completo con catálogo reactivo, carrito de compras persistente, checkout seguro y panel administrativo.',
-    metric: '🛒 +1,200 órdenes mensuales & 99.8% checkout exitoso',
+    shortDesc: 'Comercio electrónico desarrollado para Mueblería Hermanos Jota con catálogo reactivo, carrito de compras persistente, checkout seguro y panel administrativo.',
     tags: ['JavaScript', 'React', 'Node.js', 'Express.js', 'MongoDB'],
+    image: 'assets/muebleria-hermanos-jota.png',
     visualGrad: 'linear-gradient(180deg, #131d18 0%, #090f0c 100%)',
     iconSvg: `<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>`,
-    fullDesc: 'Plataforma integral de comercio electrónico de arquitectura desacoplada. Integra autenticación por tokens JWT, navegación de productos con filtros dinámicos, gestión de stock en tiempo real y panel de administración para supervisión de pedidos y clientes.',
+    fullDesc: 'Plataforma integral de comercio electrónico desarrollada a medida para Mueblería Hermanos Jota bajo una arquitectura desacoplada. Integra autenticación por tokens JWT, navegación de catálogo de mobiliario con filtros interactivos, gestión de stock en tiempo real y panel de administración para supervisión de pedidos y clientes.',
     architecture: [
-      'Frontend reactivo en React con Context API para gestión fluida del carrito de compras',
+      'Frontend reactivo en React con Context API para gestión fluida del carrito de compras y catálogo de muebles',
       'API RESTful modular con Express.js y controladores desacoplados en Node.js',
       'Modelado de colecciones NoSQL con MongoDB y validaciones estrictas en Mongoose',
       'Autenticación robusta basada en JWT (JSON Web Tokens) y contraseñas hasheadas con bcryptjs'
@@ -316,7 +316,6 @@ const projectsData = [
     categoryLabel: 'Stack MERN',
     title: 'Sistema de Gestión de Turnos',
     shortDesc: 'Plataforma web para asignación, control y reserva de turnos en tiempo real con calendario interactivo y prevención de solapamientos.',
-    metric: '⏱️ -45% tiempo de espera y 0 conflictos de concurrencia',
     tags: ['JavaScript', 'React', 'Node.js', 'Express.js', 'MongoDB'],
     visualGrad: 'linear-gradient(180deg, #141b24 0%, #0b0e14 100%)',
     iconSvg: `<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="2"/>`,
@@ -336,7 +335,6 @@ const projectsData = [
     categoryLabel: 'Stack MERN',
     title: 'Punto de Venta (POS) & Control de Stock',
     shortDesc: 'Software de mostrador de alta velocidad para cobro ágil, lectura de código de barras, control de inventario y arqueo de caja.',
-    metric: '⚡ Cobro en <3 seg y sincronización atómica de existencias',
     tags: ['JavaScript', 'React', 'Node.js', 'Express.js', 'MongoDB'],
     visualGrad: 'linear-gradient(180deg, #1b1926 0%, #0d0c14 100%)',
     iconSvg: `<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M7 8h10M7 12h6"/>`,
@@ -356,7 +354,6 @@ const projectsData = [
     categoryLabel: 'Análisis de Datos',
     title: 'Análisis de Viabilidad de Negocio',
     shortDesc: 'Modelo financiero y cuantitativo en Python y Power BI para evaluar rentabilidad, TIR, VAN y punto de equilibrio operativo.',
-    metric: '📈 Proyección financiera con precisión y simulación de 3 escenarios',
     tags: ['Python', 'Pandas', 'Power BI', 'Data Analytics', 'Modelado Financiero'],
     visualGrad: 'linear-gradient(180deg, #1f1a14 0%, #0f0c08 100%)',
     iconSvg: `<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>`,
@@ -376,7 +373,6 @@ const projectsData = [
     categoryLabel: 'Análisis de Datos',
     title: 'Dashboard de Análisis de Ventas & Clientes',
     shortDesc: 'Solución integral de Business Intelligence en Power BI y Python para detectar estacionalidad, ticket promedio y segmentación de clientes.',
-    metric: '📊 +22% detección de oportunidades de venta cruzada y retención',
     tags: ['Power BI', 'Python', 'Pandas', 'SQL', 'Visualización de Datos'],
     visualGrad: 'linear-gradient(180deg, #181922 0%, #0b0c12 100%)',
     iconSvg: `<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>`,
@@ -450,19 +446,20 @@ function renderProjects(filterCategory) {
     card.setAttribute('data-glow-radius', '90');
     card.innerHTML = `
       <div class="project-media">
-        <div class="project-visual-mock" style="background: ${p.visualGrad};">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            ${p.iconSvg || '<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>'}
-          </svg>
-        </div>
+        ${p.image ? `
+          <img src="${p.image}" alt="${p.title}" class="project-img" loading="lazy" />
+        ` : `
+          <div class="project-visual-mock" style="background: ${p.visualGrad};">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              ${p.iconSvg || '<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>'}
+            </svg>
+          </div>
+        `}
         <span class="project-category-badge">${p.categoryLabel || p.category.toUpperCase()}</span>
       </div>
       <div class="project-body">
         <h3 class="project-title">${p.title}</h3>
         <p class="project-desc">${p.shortDesc}</p>
-        <div class="project-metric-banner">
-          ${p.metric}
-        </div>
         <div class="project-tech-tags">
           ${p.tags.map(t => `<span class="project-tech-tag">${t}</span>`).join('')}
         </div>
@@ -515,15 +512,17 @@ function openProjectModal(p) {
     </div>
     <h2 style="font-family:var(--font-display); font-size:1.8rem; font-weight:800; line-height:1.2;">${p.title}</h2>
     
-    <div style="background:${p.visualGrad}; height:180px; border-radius:var(--radius-md); display:grid; place-items:center; margin: 12px 0;">
-      <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        ${p.iconSvg || '<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>'}
-      </svg>
-    </div>
-
-    <div class="project-metric-banner" style="font-size:0.9rem;">
-      ${p.metric}
-    </div>
+    ${p.image ? `
+      <div style="width:100%; height:230px; border-radius:var(--radius-md); overflow:hidden; margin: 16px 0; border: 1px solid var(--border-subtle); background:#0e0e12;">
+        <img src="${p.image}" alt="${p.title}" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;" />
+      </div>
+    ` : `
+      <div style="background:${p.visualGrad}; height:180px; border-radius:var(--radius-md); display:grid; place-items:center; margin: 12px 0;">
+        <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          ${p.iconSvg || '<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>'}
+        </svg>
+      </div>
+    `}
 
     <div>
       <h4 style="font-family:var(--font-display); margin-bottom:8px; font-size:1.1rem;">Visión General</h4>
